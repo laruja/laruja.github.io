@@ -1,24 +1,26 @@
 module.exports = {
     title: "首页",
     description: "欢迎访问我的前端日志",
-    // Google Analytics ID
+    // Google Analytics ID，
     // ga: "UA-121061441-1",
     markdown: {
         lineNumbers: true
     },
     head: [
-        ['link', { rel: 'icon', href: '/avatar.jpg' }]
+        ['link', { rel: 'icon', href: '/avatar.png' }]
     ],
     themeConfig: {
-        repo: "laruja/blog",
+        repo: "laruja/laruja.github.io",
         nav: [
             {
                 text: "知识点",
-                link: "/blog/js-this"
-            },  {
-                text: "basic",
-                link: "/basic/home"
-            },{
+                link: "/blog/js-fundamental"
+            },
+            //  {
+            //     text: "basic",
+            //     link: "/basic/home"
+            // },
+            {
                 text: "funny",
                 link: "/funny/funny-home"
             },
@@ -80,36 +82,36 @@ module.exports = {
                     ]
                 },
             ],
-            "/basic/": [
-                {
-                    title: '基础',
-                    collapsable: false,
-                    children: [
-                        "home",
-                    ]
-                },
-                {
-                    title: '数据结构&算法',
-                    collapsable: true,
-                    children: [
-                        "sa-hill",
-                    ]
-                }, {
-                    title: '网络',
-                    collapsable: true,
-                    children: [
-                        "net-http",
-                        "net-https",
-                    ]
-                },{
-                    title: '浏览器',
-                    collapsable: false,
-                    children: [
-                        "b-chrome",
-                        "b-webview",
-                    ]
-                },
-            ],
+            // "/basic/": [
+            //     {
+            //         title: '基础',
+            //         collapsable: false,
+            //         children: [
+            //             "home",
+            //         ]
+            //     },
+            //     {
+            //         title: '数据结构&算法',
+            //         collapsable: true,
+            //         children: [
+            //             "sa-hill",
+            //         ]
+            //     }, {
+            //         title: '网络',
+            //         collapsable: true,
+            //         children: [
+            //             "net-http",
+            //             "net-https",
+            //         ]
+            //     },{
+            //         title: '浏览器',
+            //         collapsable: false,
+            //         children: [
+            //             "b-chrome",
+            //             "b-webview",
+            //         ]
+            //     },
+            // ],
             "/funny/": [
                 {
                     title: 'funny',
