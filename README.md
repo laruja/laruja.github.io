@@ -1,2 +1,2 @@
-# laruja.github.io
-note
+# code
+blog source code
