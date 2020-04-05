@@ -11,116 +11,102 @@ module.exports = {
     ],
     themeConfig: {
         repo: "laruja/laruja.github.io",
-        nav: [
-            {
-                text: "知识点",
-                link: "/blog/js-fundamental"
-            },
-            //  {
-            //     text: "basic",
-            //     link: "/basic/home"
-            // },
-            {
-                text: "funny",
-                link: "/funny/funny-home"
-            },
+        nav: [{
+            text: "知识点",
+            link: "/blog/js-fundamental"
+        }, {
+            text: "basic",
+            link: "/basic/as-hill"
+        }, {
+            text: "funny",
+            link: "/funny/funny-home"
+        },
 
         ],
         sidebar: {
-            "/blog/": [
-                {
-                    title: 'js',
-                    collapsable: true,
-                    children: [
-                        "js-fundamental",
-                        "js-structure",
-                        "js-scope",
-                        "js-this",
-                        "js-object",
-                        "js-prototype",
-                        "js-function",
-                        "js-es678910",
-                        "js-promise",
-                        "js-eventloop",
-                        "js-node",
+            "/blog/": [{
+                title: 'js',
+                collapsable: true,
+                children: [
+                    "js-fundamental",
+                    "js-structure",
+                    "js-scope",
+                    "js-this",
+                    "js-object",
+                    "js-prototype",
+                    "js-function",
+                    "js-es678910",
+                    "js-promise",
+                    "js-eventloop",
+                    "js-node",
 
-                    ]
-                },
-                {
-                    title: 'Framework&Library',
-                    collapsable: true,
-                    children: [
-                        "fl-vue",
-                        "fl-react",
-                        "fl-angular",
-                        "fl-electron",
+                ]
+            },
+            {
+                title: 'Framework&Library',
+                collapsable: true,
+                children: [
+                    "fl-vue",
+                    "fl-react",
+                    "fl-angular",
+                    "fl-electron",
 
-                    ]
-                },
-                {
-                    title: '工程化',
-                    collapsable: true,
-                    children: [
-                        "dev-opt",
-                        "dev-cicd",
-                    ]
-                },
-                {
-                    title: 'CSS',
-                    collapsable: true,
-                    children: [
-                        "css-layout.md",
-                        "css-coding.md",
-                        "css-opt.md"
-                        // "css",
-                        // "css-modules",
-                        // "css-next",
-                        // "css-flex",
-                        // "css-useful",
-                        // "css-devicePixelRatio",
-                        // "css-houdini-star",
-                    ]
-                },
+                ]
+            },
+            {
+                title: '工程化',
+                collapsable: true,
+                children: [
+                    "dev-opt",
+                    "dev-cicd",
+                ]
+            },
+            {
+                title: 'CSS',
+                collapsable: true,
+                children: [
+                    "css-layout.md",
+                    "css-coding.md",
+                    "css-opt.md"
+                    // "css",
+                    // "css-modules",
+                    // "css-next",
+                    // "css-flex",
+                    // "css-useful",
+                    // "css-devicePixelRatio",
+                    // "css-houdini-star",
+                ]
+            },],
+            "/basic/": [{
+                title: '数据结构&算法',
+                collapsable: true,
+                children: [
+                    "as-hill",
+                ]
+            },
+                // {
+                //         title: '网络',
+                //         collapsable: true,
+                //         children: [
+                //             "net-http",
+                //             "net-https",
+                //         ]
+                //     },{
+                //         title: '浏览器',
+                //         collapsable: false,
+                //         children: [
+                //             "b-chrome",
+                //             "b-webview",
+                //         ]
+                //     },
             ],
-            // "/basic/": [
-            //     {
-            //         title: '基础',
-            //         collapsable: false,
-            //         children: [
-            //             "home",
-            //         ]
-            //     },
-            //     {
-            //         title: '数据结构&算法',
-            //         collapsable: true,
-            //         children: [
-            //             "sa-hill",
-            //         ]
-            //     }, {
-            //         title: '网络',
-            //         collapsable: true,
-            //         children: [
-            //             "net-http",
-            //             "net-https",
-            //         ]
-            //     },{
-            //         title: '浏览器',
-            //         collapsable: false,
-            //         children: [
-            //             "b-chrome",
-            //             "b-webview",
-            //         ]
-            //     },
-            // ],
-            "/funny/": [
-                {
-                    title: 'funny',
-                    collapsable: false,
-                    children: [
-                        "funny-home",
-                    ]
-                },
-            ],
+            "/funny/": [{
+                title: 'funny',
+                collapsable: false,
+                children: [
+                    "funny-home",
+                ]
+            },],
 
         },
         lastUpdated: "更新时间",

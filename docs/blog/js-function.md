@@ -1,7 +1,20 @@
 # function
-1. 函数是对象？
+
+- 函数本质
+- 判断方式
+- 
+
+### 一、函数本质
+
+    可被调用功能的常规对象
+
+- 函数&对象
+ 
     prototype.__proto__===Object.prototype [函数有prototype,对象只有__proto__]
-```
+
+![function](/assets/function1.png)
+![object](/assets/object1.png)
+```javascript
 // 函数 & 对象
 var testF = function () { console.log("函数 & 对象") }
 var obj = new Object();
@@ -22,10 +35,4 @@ arr.__proto__ === Array.prototype
 arr.__proto__.__proto__ === Object.prototype
 
 ``` 
-![function]
-![object]
-
-
-[function]:img/function1.png
-[object]:img/object1.png
 
