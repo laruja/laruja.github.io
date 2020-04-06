@@ -57,6 +57,7 @@ module.exports = {
                 title: '工程化',
                 collapsable: true,
                 children: [
+                    "dev-web",
                     "dev-opt",
                     "dev-cicd",
                 ]
