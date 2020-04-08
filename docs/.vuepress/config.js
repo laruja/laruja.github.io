@@ -46,10 +46,10 @@ module.exports = {
                 title: 'Framework&Library',
                 collapsable: true,
                 children: [
-                    "fl-vue",
-                    "fl-react",
-                    "fl-angular",
-                    "fl-electron",
+                    "fl-vue-react-angular",
+                    // "fl-react",
+                    // "fl-angular",
+                    // "fl-electron",
 
                 ]
             },

@@ -1,6 +1,11 @@
-# framework&library
+# vue
 
-- vue
-- react
-- angular
-- electron
+- 
+- 
+- 
+
+# Vue核心特点
+    1. 声明式渲染
+    2. 响应式数据绑定
+    3. 组件化开发
+    4. Virtual DOM：框架层面封装处理dom操作，开发者不必频繁更新dom操作，同时在性能方面框架能够规避浏览器性能瓶颈问题
