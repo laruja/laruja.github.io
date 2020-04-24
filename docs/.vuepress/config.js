@@ -39,6 +39,7 @@ module.exports = {
                     "js-promise",
                     "js-eventloop",
                     "js-node",
+                    "js-copy",
 
                 ]
             },
@@ -47,6 +48,12 @@ module.exports = {
                 collapsable: true,
                 children: [
                     "fl-vue-react-angular",
+                    "fl-vue-basic",
+                    "fl-vue2",
+                    "fl-vue3",
+                    "fl-react-basic",
+                    "fl-react-source",
+                    "fl-react16",
                     // "fl-react",
                     // "fl-angular",
                     // "fl-electron",
