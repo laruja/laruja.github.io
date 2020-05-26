@@ -10,7 +10,8 @@
 
 ### 浅克隆
 
-1. 
+1. - Object.assign({目标对象},源对象1,源对象2...)
+        - 原理:目标对象=遍历源对象的可枚举的自有键[enumerable.owned.key]
 ```js
 Object.assign(target, ...sources)
 
@@ -28,13 +29,18 @@ let newPlayer = Object.assign({}, player, {score: 2});
 // 方法二 使用对象展开语法，就可以写成：
 let newPlayer = {...player, score: 2};
 ```
+ps:虽然对于数据类型是对象复制的是地址，但如果复制后改变该对象类型为基本类型再转变成对象，则修改复制后的对象不会修改原对象内容
 
 ### 深克隆
 1. 丐中丐：业务最实用
+
 ```js
 let co = JSON.parse(JSON.stringify(o));
 //正则、拷贝函数、循环引用等
 //测试用例
+// 1
+let o = {"person": {"name": "pig","age": "18","sex": "man","hometown": {"province": "江西省","city": "抚州市","county": "崇仁县" } }}
+// 2
 function Obj() {
     this.func = function () {
         alert(1) 

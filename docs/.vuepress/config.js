@@ -31,16 +31,17 @@ module.exports = {
                     "js-fundamental",
                     "js-structure",
                     "js-scope",
+                    "js-closure",
                     "js-this",
                     "js-object",
-                    "js-prototype",
+                    "js-object-oriented",
+                    "js-copy",
                     "js-function",
+                    "js-prototype",
                     "js-es678910",
                     "js-promise",
                     "js-eventloop",
                     "js-node",
-                    "js-copy",
-
                 ]
             },
             {

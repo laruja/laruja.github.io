@@ -4,10 +4,14 @@
 - 
 
 ### 基础
+组件
+props
+state
 - 父子组件->子组件传值：
     1. 父定义属性如value，子通过this.props.value引用
 
 - 交互：
+    命名规范：时间监听On[Event] 处理时间监听方法handle[Event]
     1. onXXX={()=>{}} 用箭头函数替代function 避免this指向造成的困扰 
 
 - 记忆：保留状态（貌似类似v-model）

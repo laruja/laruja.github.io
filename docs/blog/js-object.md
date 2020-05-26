@@ -2,15 +2,16 @@
 
 - 本质
 - 创建方式
-- 操作
+- 基本操作
 - 常用内置对象
-- 机制
+- 机制(待续)
 
 ### 一、本质
 
     js对象是键和值之间的映射。键是一个字符串或者Symbol，值可以是任意类型的值。符合数据结构中散列表Hash table结构。
 
-### 二、创建方式2种,生成的对象相同
+### 二、创建方式
+        2种,生成的对象相同
 1. 构造形式       var obj = new Object()    *逐个添加属性*
 2. 声明(文字)形式  var obj = {}             *可添加多个键值对 **常用*** 
     - 创建一个空对象var obj = Object.create(null)
@@ -122,14 +123,7 @@ var obj2 = {};
             - every(..)
             - some(..)
     - 遍历值:for..of*(ES6)* *原理:向被访问对象请求一个迭代器对象，通过迭代器对象的next()遍历所有返   回值（数组--有内置的@@iterator）*
-- 
-- 浅复制
-    - Object.assign({目标对象},源对象1,源对象2...)
-        - 原理:目标对象=遍历源对象的可枚举的自有键[enumerable.owned.key]
-- 深复制
-
-
-
+- 复制 详见js copy
 
 ### 四、常用[内置对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)
 1. 基本：Object、Function、Boolean、Symbol、Error
@@ -164,78 +158,6 @@ var obj2 = {};
 8. 反射：Reflect、Proxy
 9. 国际化Intl 支持多语言处理
 10. WebAssembly
-
-### 五、机制 待梳理
-###### 属性描述
-+ writable:false,对属性值修改 静默失败；严格模式下报错TypeError
-+ configurable:false,单向操作TypeError。
-+ writable可true改为false，反之不可
-+ delete 该属性，静默失败
-    + 删除对象，不被引用的对象/函数会被垃圾回收
-+ enumerable:false,不可枚举 for..in
-###### 浅不变性
-1. 对象常量
-    writable:false configurable:false
-2. 禁止扩展
-    Object.preventExtensions(..)
-    + 非严格模式下，静默失败
-    + 严格模式下，TypeError
-3. 密封,不可添加属性、不可配置现有属性、不可删除现有属性 可以修改属性值
-    + Object.seal(..)
-        + 原理:Object.preventExtensions(..) configurable:false        
-4. 冻结  ...不可以修改属性值。不会影响对象引用的其他对象
-    + Object.freeze(..)
-        + 原理:Object.seal() writable:false
-    + 深度冻结
-        + Object.freeze(..) 在遍历对象上Object.freeze(..)
-###### [[Get]]
-+ 对象内置
-    + 算法：obj.a 在对象中查找是否有名称相同的属性，没有则遍历[[Prototype]]链，都没有返回undefined
-+ 如何判断对象是值为undefined还是不存在？
-###### [[Put]]
-+ 对象存在该属性
-    1. 属性是否是访问描述符？是且存在setter调用setter
-    2. 属性的数据描述中writable是否是false？是，非严格模式下静默失败严格模式下TypeError
-    3. 都不是，将该值设置为属性的值
-    对象不存在该属性
-###### Getter和Setter
-+ getter setter可对单个属性改写默认操作  成对出现
-
-##### 混合对象“类”[结论:在js中模拟类是得不偿失但,虽然能解决当前问题,但会埋下更多但隐患]
-+ 类的机制：抽象表示，要操作先实例化
-            构造函数初始化实例
-+ 类的继承
-    + 多态：
-            相对多态使用相对引用查找上一层
-            继承链的不同层次中一个方法可以被多次定义，调用时自动选择合适的定义
-    + 多重继承  ：所有父类的定义都会被复制到子类中
-        + js本身不提供多重继承
-+ 混入 *模拟类的复制行为，但会产生丑陋且脆弱但语法*
-    + 显示混入
-        + 显示伪多态，需要手动创建函数关联[导致代码复杂难以阅读维护，避免使用]
-            + 遍历源对象，将目标对象中没有的属性值赋给目标对象,同时在目标对象中引用源对象的同名函数
-        + 混合复制
-            1. 遍历源对象，将源对象中所有属性赋给目标对象.
-            2. 通过2步mixin复制对象
-        + 寄生继承
-            + 将函数挂在源对象的prototype上，new目标对象并返回
-        隐式混入   
-            + 利用this重新绑定功能      
-
-
-
-###### 额外的
-1. **constructor instanceof prototype __proto__ typeof**
-    + constructor 标识对象类型
-    + instanceof 检测对象类型
-    + prototype-----函数
-    + \_\_proto__ Object.getPrototypeOf ---对象
-    + typeof
-2. **new做了什么**
-    1. 创建一个对象
-    2. 将构造函数的作用域赋给新对象(this指向新对象)
-    3. 执行构造函数的代码
-    4. 返回新对象
 
 
 ###### 参考
