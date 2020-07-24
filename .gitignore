@@ -2,3 +2,4 @@ node_modules
 yarn.lock
 assets
 docs/.vuepress/dist
+aBasicCode
